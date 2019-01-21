@@ -1,0 +1,10 @@
+1. RR과 같이 R이 연속으로 2번 붙어있으면 무시
+2. R은 다음과 같이 작동한다.
+Deque *deque의 back부터 pop해서 Deque *temp에 push해주고 deque = temp를 해준다.
+=>reverse함수
+
+++ 수정
+이렇게 하면 시간 초과가 나온다.
+
+다시 생각해보면 D앞에 R이 짝수번 오면 pop_front, 홀수번 오면 pop_back을 하면 된다는 것을 알 수 있다.
+그래서 매번 뒤집어 줄 필요 없이 pop을 진행해주고 마지막에 R이 홀수개이면 reverse를 한번만 시켜주면 된다.
